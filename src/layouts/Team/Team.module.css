@@ -1,0 +1,45 @@
+.cards_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -2rem;
+}
+
+.cards_container > div {
+  flex: 1;
+  flex-basis: 300px;
+  max-width: 461px;
+  margin: 2rem;
+}
+
+/* CARD */
+
+.teamCard {
+  --marginBetweenImgAndCard: 10%;
+  --bottomCardPaddingY: 26px;
+}
+
+.teamCard_img {
+  border: 6px solid white;
+  display: flex;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 90%;
+  z-index: 10 !important;
+  position: relative;
+
+  margin-bottom: calc(-1 * var(--marginBetweenImgAndCard));
+}
+
+.teamCard_content {
+  border: 3px solid #ffffff;
+  background: #09060b;
+  border-radius: 12px;
+
+  padding-top: var(--bottomCardPaddingY);
+  padding-bottom: var(--bottomCardPaddingY);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  padding-top: calc(var(--marginBetweenImgAndCard) + var(--bottomCardPaddingY));
+}

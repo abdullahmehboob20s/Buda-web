@@ -1,0 +1,34 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  width: 127px;
+}
+
+.navbarRight {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links > :not(:last-child) {
+  margin-right: 40px;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+}
+
+.socialLinks > :not(:last-child) {
+  margin-right: 50px;
+}

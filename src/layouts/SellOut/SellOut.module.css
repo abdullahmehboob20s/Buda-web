@@ -1,0 +1,57 @@
+.cards_container > :not(:last-child) {
+  margin-bottom: 50px;
+}
+
+/* CARD */
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.cricle {
+  min-width: 35px;
+  min-height: 35px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.title::before {
+  content: "";
+  width: 100%;
+  max-width: 80px;
+  border: 2px solid white;
+
+  margin-right: 1rem;
+}
+.title::after {
+  content: "";
+  flex: 1;
+  border: 2px dashed white;
+
+  margin-left: 1rem;
+}
+
+.title_text {
+  min-width: fit-content;
+}
+
+.cardsPoints > :not(:last-child) {
+  margin-bottom: 8px;
+}
+
+/* BUTTON */
+
+.btn {
+  padding: 1.5rem 2rem;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}

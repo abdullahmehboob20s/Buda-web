@@ -1,0 +1,43 @@
+.hero {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+}
+
+.redBtn {
+  width: 100%;
+  max-width: 240px;
+  height: 84px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+}
+
+.btns > :not(:last-child) {
+  margin-right: 2rem;
+}
+
+.divisions {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.divisions > :not(:last-child) {
+  margin-right: 60px;
+}
+
+.divider_line {
+  width: 3px;
+  height: 60px !important;
+  background-color: white;
+}
