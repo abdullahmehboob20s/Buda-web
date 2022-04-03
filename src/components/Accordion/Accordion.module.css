@@ -58,3 +58,39 @@
   padding: 30px 50px;
   padding-top: 0;
 }
+
+@media (max-width: 1000px) {
+  .indicator {
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  .indicator::before {
+    width: 5px;
+  }
+
+  .indicator::after {
+    height: 5px;
+  }
+
+  .btn {
+    padding: 20px 30px;
+  }
+
+  .accordion_content {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .indicator {
+    min-width: 15px;
+    min-height: 15px;
+  }
+  .indicator::before {
+    width: 3px;
+  }
+  .indicator::after {
+    height: 3px;
+  }
+}

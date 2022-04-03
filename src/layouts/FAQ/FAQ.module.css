@@ -1,3 +1,9 @@
 .accordions_container > :not(:last-child) {
   margin-bottom: 30px;
 }
+
+@media (max-width: 500px) {
+  .accordions_container > :not(:last-child) {
+    margin-bottom: 16px;
+  }
+}

@@ -12,3 +12,9 @@
   padding: 1.5rem;
   background-color: var(--red);
 }
+
+@media (max-width: 760px) {
+  .socialIcons > :not(:last-child) {
+    margin-right: 1rem;
+  }
+}

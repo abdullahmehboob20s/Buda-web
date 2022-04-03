@@ -656,6 +656,9 @@ a {
 .text-center {
   text-align: center;
 }
+.text-left {
+  text-align: left;
+}
 
 button {
   border: none;
