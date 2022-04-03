@@ -753,5 +753,6 @@ li {
 .yellow-btn {
   background: url(./assets/images/yellow-btn.png);
   background-repeat: no-repeat no-repeat;
+
   background-size: 100% 100%;
 }

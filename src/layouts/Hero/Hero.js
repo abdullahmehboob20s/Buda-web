@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Hero.module.css";
 import buddha from "assets/images/buddha.png";
 import useMediaQuery from "hooks/useMediaQuery";
+import { Link } from "react-router-dom";
 
 const DivisionCard = ({ title, subTitle }) => {
   const isBellow1200px = useMediaQuery("(max-width : 1200px)");
@@ -77,7 +78,8 @@ function Hero() {
                 isBellow500px ? "mb-40px" : "mb-60px"
               }`}
             >
-              <button
+              <Link
+                to="/mint"
                 className={`${styles.redBtn} ${
                   isBellow1200px
                     ? isBellow500px
@@ -87,8 +89,9 @@ function Hero() {
                 } white uppercase btn-red pointer`}
               >
                 MINT NOW
-              </button>
-              <button
+              </Link>
+              <Link
+                to="/connect-wallet"
                 className={`${styles.redBtn} ${
                   isBellow1200px
                     ? isBellow500px
@@ -98,7 +101,7 @@ function Hero() {
                 } white uppercase yellow-btn pointer`}
               >
                 CONNECT WALLET
-              </button>
+              </Link>
             </div>
 
             <div className={`${styles.divisions}`}>

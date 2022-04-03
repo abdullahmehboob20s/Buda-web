@@ -18,7 +18,9 @@ function Navbar() {
     <div className="container-wrapper">
       <div className={`${styles.wrapper}`}>
         <div className={`${styles.left} flex`}>
-          <img src={logo} className={`${styles.logo}`} alt="" />
+          <Link to="/" className="pointer">
+            <img src={logo} className={`${styles.logo}`} alt="" />
+          </Link>
         </div>
         <div className={`${styles.hamburger_wrapper}`}>
           <button
