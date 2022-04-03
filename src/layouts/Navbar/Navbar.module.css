@@ -1,17 +1,11 @@
 .wrapper {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 
 .logo {
   width: 127px;
-}
-
-.navbarRight {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
 }
 
 .links {
@@ -31,4 +25,77 @@
 
 .socialLinks > :not(:last-child) {
   margin-right: 50px;
+}
+
+.hamburger_wrapper {
+  display: none;
+}
+
+.close_icons {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .socialLinks > :not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .links > :not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 670px) {
+  .links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    z-index: 101;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: unset;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    transform: translateX(300px);
+  }
+
+  .links.open {
+    transform: translateX(0px);
+  }
+
+  .links > :not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 24px;
+  }
+
+  .close_icons {
+    display: block;
+    margin-left: -5px;
+  }
+
+  .wrapper {
+    grid-template-columns: 80px auto auto;
+    justify-content: space-between;
+  }
+
+  .left {
+    grid-column: 2/3;
+    grid-row: 1/1;
+  }
+
+  .hamburger_wrapper {
+    display: block;
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+  .socialLinks {
+    justify-content: flex-end;
+  }
 }

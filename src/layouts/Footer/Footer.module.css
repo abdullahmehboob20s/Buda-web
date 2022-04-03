@@ -1,0 +1,14 @@
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialIcons > :not(:last-child) {
+  margin-right: 2rem;
+}
+
+.copyRights {
+  padding: 1.5rem;
+  background-color: var(--red);
+}

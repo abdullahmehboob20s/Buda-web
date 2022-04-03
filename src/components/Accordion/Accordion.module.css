@@ -1,13 +1,21 @@
+.accordion {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 .btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 30px 50px;
 }
 
 .indicator {
-  min-width: 36px;
-  min-height: 36px;
+  min-width: 30px;
+  min-height: 30px;
   position: relative;
   display: inline-block;
 }
@@ -23,6 +31,11 @@
   background-color: white;
   transition: all 0.3s ease;
 }
+
+.indicator.open::before {
+  opacity: 0;
+}
+
 .indicator::after {
   content: "";
   position: absolute;
@@ -33,4 +46,15 @@
   transform: translateY(-50%);
   background-color: white;
   transition: all 0.3s ease;
+}
+
+.accordion_body {
+  transition: all 0.3s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion_content {
+  padding: 30px 50px;
+  padding-top: 0;
 }

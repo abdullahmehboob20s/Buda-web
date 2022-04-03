@@ -43,3 +43,24 @@
 
   padding-top: calc(var(--marginBetweenImgAndCard) + var(--bottomCardPaddingY));
 }
+
+.teamCard_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamCard_icons > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (max-width: 600px) {
+  .teamCard_img {
+    max-width: 200px;
+  }
+
+  .teamCard_content {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}

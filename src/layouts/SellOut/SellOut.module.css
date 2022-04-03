@@ -55,3 +55,31 @@
   width: fit-content;
   margin: 0 auto;
 }
+
+@media (max-width: 1000px) {
+  .cricle {
+    min-width: 25px;
+    min-height: 25px;
+  }
+
+  .title::before {
+    border: 2px solid white;
+  }
+  .title::after {
+    border: 2px dashed white;
+  }
+}
+@media (max-width: 600px) {
+  .cricle {
+    min-width: 15px;
+    min-height: 15px;
+  }
+
+  .title::before {
+    border: 1px solid white;
+    max-width: 60px;
+  }
+  .title::after {
+    border: 1px dashed white;
+  }
+}
