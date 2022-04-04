@@ -16,7 +16,6 @@ function Navbar() {
   const isBellow670px = useMediaQuery("(max-width : 670px)");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = OutsideClickDetector(() => setIsSidebarOpen(false));
-
   let history = useNavigate();
   const location = useLocation();
 

@@ -7,6 +7,7 @@ import { ImMinus, ImPlus } from "react-icons/im";
 import { CgFormatSlash } from "react-icons/cg";
 import YellowBtn from "components/Buttons/YellowBtn/YellowBtn";
 import RedButton from "components/Buttons/RedButton/RedButton";
+import { useNavigate } from "react-router-dom";
 
 const Colon = () => {
   return (
@@ -46,6 +47,7 @@ function MintPage() {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
   const isBellow600px = useMediaQuery("(max-width : 600px)");
   let [counter, setCounter] = useState(1);
+  let navigate = useNavigate();
 
   const [deadline, setDeadline] = useState("April 21, 2022 00:00:00");
 
@@ -113,6 +115,7 @@ function MintPage() {
               title="CONNECT WALLET"
               fontSize={isBellow1000px ? "fs-16px" : "fs-20px"}
               className={styles.connect_btn}
+              onClick={() => navigate("/connect-wallet")}
             />
           </div>
 
