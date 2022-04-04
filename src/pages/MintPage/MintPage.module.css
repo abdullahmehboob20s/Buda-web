@@ -5,7 +5,7 @@
 
 .connect_btn {
   width: 100%;
-  padding: 20px 0;
+  padding: 1rem;
 }
 
 .timer_container {
@@ -91,4 +91,43 @@
   justify-content: center;
   border-radius: 5px;
   background-color: white;
+}
+
+@media (max-width: 1000px) {
+  .connect_btn {
+    padding: 0.8rem;
+  }
+
+  .timer_box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timer_container > :not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .counter_box {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 600px) {
+  .timer_container > :not(:last-child) {
+    margin-right: 0.6rem;
+  }
+
+  .timer_box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .colon {
+    margin-bottom: 60px;
+  }
+
+  .colon > div {
+    height: 18px;
+  }
 }
