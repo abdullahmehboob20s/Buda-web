@@ -5,6 +5,7 @@ import styles from "./ConnectCard.module.css";
 const ConnectCard = ({ title, icon, onConnect }) => {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
   const isBellow600px = useMediaQuery("(max-width : 600px)");
+  const isBellow680pxHeight = useMediaQuery("(max-height : 680px)");
 
   return (
     <div className={`${styles.connectCard}`}>
@@ -17,17 +18,11 @@ const ConnectCard = ({ title, icon, onConnect }) => {
       </div>
 
       <div className={`${styles.content}`}>
-        <img
-          src={icon}
-          className={`${styles.icon} ${isBellow1000px ? "mb-40px" : "mb-60px"}`}
-          alt=""
-        />
+        <img src={icon} className={`${styles.icon} `} alt="" />
 
         <button
           onClick={() => onConnect({ walletImg: icon, walletName: title })}
-          className={`${styles.btn} ${
-            isBellow1000px ? "fs-16px" : "fs-20px"
-          } yellow-btn uppercase white`}
+          className={`${styles.btn}  yellow-btn uppercase white`}
         >
           CONNECT
         </button>

@@ -10,7 +10,7 @@ import useMediaQuery from "hooks/useMediaQuery";
 
 function ConnectWalletPage() {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
-  const isBellow600px = useMediaQuery("(max-width : 600px)");
+  const isBellow680pxHeight = useMediaQuery("(max-height : 680px)");
   const [isConnected, setIsConnected] = useState(false);
   const [walletData, setWalletData] = useState({
     walletImg: null,
@@ -24,22 +24,18 @@ function ConnectWalletPage() {
 
   return (
     <div className={styles.connect_wallet_page}>
-      <div className="mb-50px">
+      <div className={isBellow680pxHeight ? "mb-20px" : "mb-50px"}>
         <Navbar />
       </div>
       <div className={`${styles.page_content} container-wrapper`}>
         <div className={isBellow1000px ? "mb-40px" : "mb-80px"}>
           <h1
-            className={`text-center font-mouse white ${
-              isBellow1000px ? "fs-50px" : "fs-100px"
-            } weight-4 mb-20px`}
+            className={`${styles.connect_wallet_title} text-center font-mouse white  weight-4 mb-20px`}
           >
             Connect Wallet.
           </h1>
           <p
-            className={`text-center white ${
-              isBellow1000px ? "fs-18px" : "fs-28px"
-            } uppercase`}
+            className={`${styles.connect_wallet_subtitle} text-center white uppercase`}
           >
             connect your preffered wallet
           </p>

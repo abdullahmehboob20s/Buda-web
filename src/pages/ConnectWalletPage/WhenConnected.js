@@ -8,7 +8,7 @@ function WhenConnected({ data, setIsConnected }) {
 
   return (
     <div className={`${styles.whenConnected}`}>
-      <div className={`${styles.details} mb-50px`}>
+      <div className={`${styles.details}`}>
         <div className={`${styles.details_img_wrapper}`}>
           <img
             src={data.walletImg}
@@ -16,19 +16,13 @@ function WhenConnected({ data, setIsConnected }) {
             alt=""
           />
         </div>
-        <p
-          className={`${
-            isBellow1000px ? (isBellow600px ? "fs-16px" : "fs-20px") : "fs-30px"
-          } text-center black`}
-        >
+        <p className={`${styles.connected_wallet_title} text-center black`}>
           your {data.walletName} wallet had been <br /> connected successfully!
         </p>
       </div>
 
       <button
-        className={`${styles.mint_btn} ${
-          isBellow1000px ? "fs-16px" : "fs-20px"
-        } white uppercase weight-3 btn-red`}
+        className={`${styles.mint_btn} white uppercase weight-3 btn-red`}
         onClick={() => setIsConnected(false)}
       >
         MINT NOW

@@ -1,19 +1,34 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import logo from "assets/images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 import useMediaQuery from "hooks/useMediaQuery";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrFormClose } from "react-icons/gr";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import { Link as ScrollLink } from "react-scroll";
+import { useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll/modules";
 
 function Navbar() {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
   const isBellow670px = useMediaQuery("(max-width : 670px)");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = OutsideClickDetector(() => setIsSidebarOpen(false));
+
+  let history = useNavigate();
+  const location = useLocation();
+
+  const scrollTarget = (target, options) => scroller.scrollTo(target, options);
+
+  const scrollToPage = async (target, options) => {
+    if (location.pathname !== "/") {
+      await history("/");
+    }
+    scrollTarget(target, options);
+    setIsSidebarOpen(false);
+  };
 
   return (
     <div className="container-wrapper">
@@ -43,55 +58,47 @@ function Navbar() {
           >
             <GrFormClose size={30} />
           </button>
-          <ScrollLink
-            onClick={() => setIsSidebarOpen(false)}
-            offset={-100}
-            to="about"
+
+          <div
+            onClick={() => scrollToPage("about", { offset: -100 })}
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
           >
             About
-          </ScrollLink>
-          <ScrollLink
-            onClick={() => setIsSidebarOpen(false)}
-            offset={-100}
-            to="sell-out"
+          </div>
+          <div
+            onClick={() => scrollToPage("sell-out", { offset: -100 })}
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
           >
             Sell Out
-          </ScrollLink>
-          <ScrollLink
-            onClick={() => setIsSidebarOpen(false)}
-            offset={-100}
-            to="whitepaper"
+          </div>
+          <div
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
           >
             Whitepaper
-          </ScrollLink>
-          <ScrollLink
-            onClick={() => setIsSidebarOpen(false)}
-            offset={-100}
-            to="team"
+          </div>
+          <div
+            onClick={() => scrollToPage("team", { offset: -100 })}
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
           >
             Team
-          </ScrollLink>
-          <ScrollLink
-            onClick={() => setIsSidebarOpen(false)}
-            to="faqs"
+          </div>
+
+          <div
+            onClick={() => scrollToPage("faqs", { offset: 100 })}
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
           >
             FAQS
-          </ScrollLink>
+          </div>
         </div>
         <div className={`${styles.socialLinks}`}>
           <a href="#">

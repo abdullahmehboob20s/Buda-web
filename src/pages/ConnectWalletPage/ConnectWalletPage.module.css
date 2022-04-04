@@ -36,6 +36,7 @@
   border-radius: 5px;
   padding: 30px 100px;
   padding-top: 0;
+  margin-bottom: 50px;
 }
 
 .details_img_wrapper {
@@ -61,11 +62,73 @@
   cursor: pointer;
   margin: 0 auto;
   display: block;
+  font-size: 20px;
+}
+
+.connect_wallet_title {
+  font-size: 100px;
+}
+.connect_wallet_subtitle {
+  font-size: 28px;
+}
+
+.connected_wallet_title {
+  font-size: 30px;
+}
+
+@media (max-height: 900px) {
+  .connect_wallet_title {
+    font-size: 80px;
+  }
+
+  .connect_wallet_subtitle {
+    font-size: 22px;
+  }
+
+  .whenConnected {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+
+  .connected_wallet_title {
+    font-size: 20px;
+  }
+
+  .details_img {
+    width: 120px;
+    height: 120px;
+    margin-top: -65px;
+  }
+
+  .whenConnected {
+    margin-top: 30px;
+  }
+
+  .details {
+    padding: 20px 50px;
+    padding-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .mint_btn {
+    padding: 16px 40px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 1000px) {
   .cards > :not(:last-child) {
     margin-right: 1.5rem;
+  }
+
+  .connect_wallet_subtitle {
+    font-size: 18px;
+  }
+
+  .connect_wallet_title {
+    font-size: 50px;
   }
 
   .whenConnected {
@@ -82,6 +145,14 @@
     padding: 30px 0px;
     padding-top: 0;
   }
+
+  .connected_wallet_title {
+    font-size: 20px;
+  }
+
+  .mint_btn {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -93,5 +164,9 @@
   .cards > :not(:last-child) {
     margin-right: 0rem;
     margin-bottom: 4rem;
+  }
+
+  .connected_wallet_title {
+    font-size: 16px;
   }
 }

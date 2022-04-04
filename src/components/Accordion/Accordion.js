@@ -1,5 +1,6 @@
+import OutsideClickDetector from "hooks/OutsideClickDetector";
 import useMediaQuery from "hooks/useMediaQuery";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Accordion.module.css";
 
 function Accordion({ title, desc }) {
@@ -7,21 +8,23 @@ function Accordion({ title, desc }) {
   const isBellow500px = useMediaQuery("(max-width : 500px)");
   const accordionBodyRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
+  const accordionRef = OutsideClickDetector(() => setIsOpen(false));
 
-  const handler = () => {
-    if (accordionBodyRef.current.clientHeight === 0) {
+  useEffect(() => {
+    if (isOpen) {
       accordionBodyRef.current.style.height =
         accordionBodyRef.current.scrollHeight + "px";
-      setIsOpen(true);
     } else {
       accordionBodyRef.current.style.height = 0 + "px";
-      setIsOpen(false);
     }
-  };
+  });
 
   return (
-    <div className={`${styles.accordion}`}>
-      <button className={`${styles.btn} pointer text-left`} onClick={handler}>
+    <div className={`${styles.accordion}`} ref={accordionRef}>
+      <button
+        className={`${styles.btn} pointer text-left`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <span
           className={`${
             isBellow1000px ? (isBellow500px ? "fs-12px" : "fs-20px") : "fs-30px"
