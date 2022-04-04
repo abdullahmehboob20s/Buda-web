@@ -21,16 +21,17 @@ function HomePage() {
         <div className={isBellow700px ? "mb-80px" : "mb-150px"}>
           <Hero />
         </div>
-        <div className={isBellow700px ? "mb-80px" : "mb-200px"}>
+        <div id="about" className={isBellow700px ? "mb-80px" : "mb-200px"}>
           <Story />
         </div>
-        <div className={isBellow700px ? "mb-80px" : "mb-200px"}>
+        <div id="sell-out" className={isBellow700px ? "mb-80px" : "mb-200px"}>
           <SellOut />
         </div>
-        <div className="">
+        <div id="team">
           <Team />
         </div>
         <div
+          id="faqs"
           className={`${
             isBellow700px ? "py-100px mb-40px" : "py-150px mb-100px"
           }`}

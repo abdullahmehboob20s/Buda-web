@@ -7,6 +7,7 @@ import useMediaQuery from "hooks/useMediaQuery";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrFormClose } from "react-icons/gr";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
+import { Link as ScrollLink } from "react-scroll";
 
 function Navbar() {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
@@ -42,46 +43,55 @@ function Navbar() {
           >
             <GrFormClose size={30} />
           </button>
-          <Link
-            to="/"
+          <ScrollLink
+            onClick={() => setIsSidebarOpen(false)}
+            offset={-100}
+            to="about"
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
-            }`}
+            } pointer`}
           >
             About
-          </Link>
-          <Link
-            to="/"
+          </ScrollLink>
+          <ScrollLink
+            onClick={() => setIsSidebarOpen(false)}
+            offset={-100}
+            to="sell-out"
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
-            }`}
+            } pointer`}
           >
             Sell Out
-          </Link>
-          <Link
-            to="/"
+          </ScrollLink>
+          <ScrollLink
+            onClick={() => setIsSidebarOpen(false)}
+            offset={-100}
+            to="whitepaper"
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
-            }`}
+            } pointer`}
           >
             Whitepaper
-          </Link>
-          <Link
-            to="/"
+          </ScrollLink>
+          <ScrollLink
+            onClick={() => setIsSidebarOpen(false)}
+            offset={-100}
+            to="team"
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
-            }`}
+            } pointer`}
           >
             Team
-          </Link>
-          <Link
-            to="/"
+          </ScrollLink>
+          <ScrollLink
+            onClick={() => setIsSidebarOpen(false)}
+            to="faqs"
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
-            }`}
+            } pointer`}
           >
             FAQS
-          </Link>
+          </ScrollLink>
         </div>
         <div className={`${styles.socialLinks}`}>
           <a href="#">
