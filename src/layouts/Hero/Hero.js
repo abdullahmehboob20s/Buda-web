@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.css";
-import buddha from "assets/images/buddha.png";
+import buddha from "assets/images/buddha.gif";
 import useMediaQuery from "hooks/useMediaQuery";
 import { Link } from "react-router-dom";
 

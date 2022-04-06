@@ -74,13 +74,14 @@ function Navbar() {
           >
             Sell Out
           </div>
-          <div
+          <Link
+            to="/whitepaper"
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
           >
             Whitepaper
-          </div>
+          </Link>
           <div
             onClick={() => scrollToPage("team", { offset: -100 })}
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${

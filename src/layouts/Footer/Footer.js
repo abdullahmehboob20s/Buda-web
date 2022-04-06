@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import useMediaQuery from "hooks/useMediaQuery";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const isBellow700px = useMediaQuery("(max-width : 700px)");
@@ -69,7 +70,10 @@ function Footer() {
           isBellow700px ? "fs-10px" : "fs-20px"
         } white text-center weight-4 font-poppins`}
       >
-        Copyrights, 2022. All rights reserved.
+        {/* Copyrights, 2022. All rights reserved. */}
+        <Link to="/terms-and-conditions" className="hover-underline">
+          terms and conditions
+        </Link>
       </div>
     </div>
   );

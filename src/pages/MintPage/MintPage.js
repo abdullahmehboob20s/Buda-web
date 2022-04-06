@@ -89,11 +89,10 @@ function MintPage() {
 
   return (
     <div className={`${styles.mint_page}`}>
+      <div className="">
+        <Navbar />
+      </div>
       <div className={`${styles.mint_page_container} container-wrapper`}>
-        <div className="">
-          <Navbar />
-        </div>
-
         <div className={`${styles.page_content} py-50px`}>
           <div className={isBellow1000px ? "mb-20px" : "mb-40px"}>
             <h1

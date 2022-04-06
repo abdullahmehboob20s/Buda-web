@@ -46,34 +46,38 @@ const TeamCard = ({ name, desc, links, img }) => {
   );
 };
 
-function Team() {
+function Team({ showTitles = true }) {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
   const isBellow600px = useMediaQuery("(max-width : 600px)");
 
   return (
     <div>
       <div className="container-wrapper">
-        <div className={`${isBellow600px ? "mb-50px" : "mb-100px"}`}>
-          <Title
-            title="Meet Our Team."
-            className={`text-center ${isBellow600px ? "mb-20px" : "mb-30px"}`}
-          />
+        {showTitles ? (
+          <div className={`${isBellow600px ? "mb-50px" : "mb-100px"}`}>
+            <Title
+              title="Meet Our Team."
+              className={`text-center ${isBellow600px ? "mb-20px" : "mb-30px"}`}
+            />
 
-          <p
-            className={`${
-              isBellow1000px
-                ? isBellow600px
-                  ? "fs-12px"
-                  : "fs-16px"
-                : "fs-24px"
-            }  white uppercase text-center mb-30px`}
-          >
-            our project was co-founded by willy and ash two big friends with
-            years of experience in defi and financial spaces. we also have an
-            amazing nft advisor, artist, developer, community managers,
-            designer, and marketing and pr professionals.
-          </p>
-        </div>
+            <p
+              className={`${
+                isBellow1000px
+                  ? isBellow600px
+                    ? "fs-12px"
+                    : "fs-16px"
+                  : "fs-24px"
+              }  white uppercase text-center mb-30px`}
+            >
+              our project was co-founded by willy and ash two big friends with
+              years of experience in defi and financial spaces. we also have an
+              amazing nft advisor, artist, developer, community managers,
+              designer, and marketing and pr professionals.
+            </p>
+          </div>
+        ) : (
+          ""
+        )}
 
         <div className={`${styles.cards_container}`}>
           <TeamCard
