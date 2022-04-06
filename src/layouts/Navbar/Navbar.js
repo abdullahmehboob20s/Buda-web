@@ -7,7 +7,6 @@ import useMediaQuery from "hooks/useMediaQuery";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrFormClose } from "react-icons/gr";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
-import { Link as ScrollLink } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll/modules";
 

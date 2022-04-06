@@ -1,6 +1,7 @@
 import Title from "components/Title/Title";
 import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./SellOut.module.css";
 
 const Card = ({ title, points }) => {
@@ -90,14 +91,14 @@ function SellOut() {
           />
         </div>
 
-        <a
-          href="#"
+        <Link
+          to="/whitepaper"
           className={`${styles.btn} ${
             isBellow600px ? "fs-10px" : "fs-20px"
           } btn-red uppercase`}
         >
           READ OUR WHITEPAPER
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -16,13 +16,23 @@ function Footer() {
   return (
     <div className={`${styles.wrapper}`}>
       <div className="container-wrapper">
-        <h1
+        <div className="text-center mb-10px">
+          <Link
+            to="/terms-and-conditions"
+            className={`text-center ${
+              isBellow700px ? "fs-12px" : "fs-30px"
+            } red weight-7 font-poppins text-center hover-underline `}
+          >
+            Terms And Conditions
+          </Link>
+        </div>
+        {/* <h1
           className={`text-center ${
             isBellow700px ? "fs-12px" : "fs-30px"
           } red weight-7 font-poppins mb-10px`}
         >
           Privacy Policy
-        </h1>
+        </h1> */}
 
         <h2
           className={`white text-center ${
@@ -70,10 +80,7 @@ function Footer() {
           isBellow700px ? "fs-10px" : "fs-20px"
         } white text-center weight-4 font-poppins`}
       >
-        {/* Copyrights, 2022. All rights reserved. */}
-        <Link to="/terms-and-conditions" className="hover-underline">
-          terms and conditions
-        </Link>
+        Copyrights, 2022. All rights reserved.
       </div>
     </div>
   );
