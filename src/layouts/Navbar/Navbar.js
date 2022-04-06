@@ -59,7 +59,13 @@ function Navbar() {
           </button>
 
           <div
-            onClick={() => scrollToPage("about", { offset: -100 })}
+            onClick={() =>
+              scrollToPage("about", {
+                offset: -100,
+                smooth: true,
+                duration: 1000,
+              })
+            }
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
@@ -67,7 +73,13 @@ function Navbar() {
             About
           </div>
           <div
-            onClick={() => scrollToPage("sell-out", { offset: -100 })}
+            onClick={() =>
+              scrollToPage("sell-out", {
+                offset: -100,
+                smooth: true,
+                duration: 1000,
+              })
+            }
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
@@ -83,7 +95,13 @@ function Navbar() {
             Whitepaper
           </Link>
           <div
-            onClick={() => scrollToPage("team", { offset: -100 })}
+            onClick={() =>
+              scrollToPage("team", {
+                offset: -100,
+                smooth: true,
+                duration: 1000,
+              })
+            }
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}
@@ -92,7 +110,13 @@ function Navbar() {
           </div>
 
           <div
-            onClick={() => scrollToPage("faqs", { offset: 100 })}
+            onClick={() =>
+              scrollToPage("faqs", {
+                offset: 100,
+                smooth: true,
+                duration: 1000,
+              })
+            }
             className={`${isBellow1000px ? "fs-16px" : "fs-22px"} ${
               isBellow670px ? "black" : "white"
             } pointer`}

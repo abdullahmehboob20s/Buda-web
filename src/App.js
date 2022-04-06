@@ -5,10 +5,12 @@ import ConnectWalletPage from "pages/ConnectWalletPage/ConnectWalletPage";
 import MintPage from "pages/MintPage/MintPage";
 import TermsAndConditions from "pages/TermsAndConditions/TermsAndConditions";
 import Whitepaper from "pages/Whitepaper/Whitepaper";
+import ScrollToTop from "components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/connect-wallet" element={<ConnectWalletPage />} />
